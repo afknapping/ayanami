@@ -1,0 +1,12 @@
+.blog-lastest
+  %h2 Latest posts:
+
+  %ol
+    - blog.articles[0...5].each do |article|
+      %li
+        %h3
+          = link_to article.title, article
+          %span= article.date.strftime('%b %e')
+
+  %p
+    = link_to 'See all posts', '/pages/archive.html'

@@ -1,0 +1,21 @@
+!!! 5
+%html
+  = partial '/partials/head'
+  %body{:class => page_classes}
+    = partial '/partials/nav'
+    #navspacer
+    .post
+      = yield
+
+    .clear
+    %footer
+      = partial '/partials/footer'  
+
+
+    / %header
+    /   = partial '/partials/header'  
+    
+
+
+  
+  = partial 'partials/script-embed'

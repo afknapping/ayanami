@@ -1,0 +1,7 @@
+%p Hello world. I am the index partial (haml).
+
+.chunk
+  .visual
+    %img{ :src => "/content/images/littlesmoere.jpg" }
+  .text
+    = partial '/content/text/index'
