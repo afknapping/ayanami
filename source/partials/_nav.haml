@@ -2,10 +2,17 @@
   %ul
     %li
       %a{ :href => "/"}
-        %img#logo{ :src => '/content/images/littlesmoere.jpg'}
-    \|
+        %img#logo{ :src => '/content/images/avatar.jpg'}
     %li
-      %a{ :href => '/pages/about.html'} about
-    \|
+      = succeed '.' do
+        %a{ :href => "/"}Crush and Create
+      A blog by
+      = succeed '.' do
+        %a{ :href => "http://filtercake.com" } filtercake
+    %br
     %li
-      %a{ :href => '/pages/archive.html'} archive
+      %a{ :href => '/pages/about.html' }
+        About
+    / \|
+    / %li
+    /   %a{ :href => '/pages/archive.html'} archive
