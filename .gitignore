@@ -1,2 +1,4 @@
 .sass-cache
 build/
+source/content/posts/
+Gemfile.lock
