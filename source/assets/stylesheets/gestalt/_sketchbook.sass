@@ -1,7 +1,8 @@
 body
   background-color: #dddddd
 nav
-  +whitespace
+  font-size: 0.8em
+  margin-bottom: $line-height * 3
   #logo
     width: 64px
     margin-bottom: 0
@@ -32,6 +33,17 @@ time
   font-size: 0.8em
   display: block
   text-align: right
+
+
+.post time
+  position: relative
+  top: - $line-height * 2
+li 
+  list-style-type: square
+
+pre
+  white-space: pre 
+
 
 a
   color: black
