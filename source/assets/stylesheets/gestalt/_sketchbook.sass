@@ -1,0 +1,51 @@
+body
+  background-color: #dddddd
+nav
+  +whitespace
+  #logo
+    width: 64px
+    margin-bottom: 0
+    float: left
+    margin-right: $line-height
+  li
+    display: inline
+
+
+article
+  margin-bottom: $line-height * 4
+
+.link-body, .post-summary
+  +whitespace
+
+h1, h2, h3, h4, h5, h6 
+  +whitespace
+
+
+h1.link, h1.post
+  border-top: 1px solid gray
+  padding-top: 5px
+h1.link
+  font-size: 1.4em
+h1.post
+  font-size: 2em
+time
+  font-size: 0.8em
+  display: block
+  text-align: right
+
+a
+  color: black
+a:hover
+  color: #a20000
+
+h1
+  a
+    color: #a20000
+    text-decoration: none
+
+
+
+
+footer
+  border-top: 1px solid gray
+  font-size: 0.6em
