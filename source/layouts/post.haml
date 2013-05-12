@@ -5,6 +5,16 @@
     = partial '/partials/nav'
     #navspacer
     .post
+      - if current_page.data.link
+        %h1.link
+          Link: 
+          = link_to current_page.data.title, current_page.data.link
+      - else
+        %h1.post
+          = link_to current_page.data.title, current_page.url
+      %time{ :datetime => current_page.date, :pubtime => "" }
+        Posted
+        = link_to current_page.date.strftime('%b %e'), current_page.url
       = yield
 
     .clear
