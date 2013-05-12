@@ -1,0 +1,228 @@
+// @media screen and (min-width: $break-medium)
+
+nav ul
+  display: inline
+
+pre
+  font-family: Courier
+  font-size: 0.8em
+  margin-bottom: $line-height
+  padding: $line-height
+  border: 1px solid gray
+
+blockquote
+  p 
+    padding-left: $line-height
+    border-left: 2px solid gray
+  p:last-child
+    font-size: 62%
+    padding-left: 0
+    border-left: none
+  p:first-child
+    font-size: 100%
+    padding-left: $line-height
+    border-left: 2px solid gray
+
+li 
+  list-style-type: square
+
+.blog-lastest
+  li
+    list-style-type: none
+
+strong
+  font-family: $bold
+  font-weight: normal
+
+
+.wireframe
+  outline: 1px dotted red
+
+
++above($break-medium)
+  .post, .content, footer
+    p, ul, ol
+      max-width: ($break-medium - 200px)
+      margin-left: 125px
+    img
+      position: relative
+      left: -125px
+
+
+h1, h2
+  border-top: 1px solid gray
+
+nav
+  +border-bottom-radius(10px)
+  position: fixed
+  top: 0
+  // left: 0 
+  background-color: $transp-black
+  color: white
+  width: auto
+  padding: 10px
+
+  ul
+    margin-bottom: 0
+    @media screen and (max-width: $break-medium)
+      padding: 1rem
+    li
+      // list-style: none
+      display: inline
+      text-transform: uppercase
+      font-family: $bold
+      a:link
+        text-decoration: none
+
+#logo
+  width: 100px
+  margin-bottom: 0
+  margin-right: 10px
+
+#navspacer
+  height: 250px
+
+
+// TYPOGRAPHY BASICS
+
+body
+  font-family: $book
+  // enable ligatures and kerning
+  text-rendering: optimizeLegibility
+  // remember there is body text-rendering: optimizeSpeed (eg mobile)
+  font-size: 1.2em
+
+
+
+h1, h2, h3, h4, h5, h6, strong
+  font-family: $bold
+  font-weight: normal
+em, blockquote
+  font-family: $italic
+  font-weight: normal
+
+strong
+  font-family: $bold
+  font-weight: normal
+
+p, ul, ol, li, table, h1, h2, h3, h4, h5, h6, blockquote, img, iframe, embed, object
+  margin-bottom: $line-height
+  line-height: $line-height
+  // &:last-child
+  //   margin-bottom: 0
+
+footer
+  font-size: 62%
+  padding-top: $line-height
+  border-top: 1px solid #bbbbbb
+
+
+
+
+
+
+.spacer
+  margin-bottom: 0
+
+
+
+
+
+// RESPONSIVENESS HELPERS
+// not done, WIP!
+
+.small-only
+  +above($break-medium)
+    display: none
+  +above($break-large)
+    display: none
+.medium-only
+.large-only
+
+
+
+
+
+
+// example for mixins.
+
+.column-half
+
+
+
+.chunk
+  width: 100%
+  +whitespace
+  clear: both
+  +above($break-medium)
+    .visual
+      width: 47%
+      float: left
+      margin-right: 5%
+    .text 
+      width: 47%
+      float: left
+      margin-right: 0
+  +above($break-large)
+    width: 30%
+    float: left
+    clear: none
+    margin-right: 5%
+    &:last-child
+      margin-right: 0
+    .visual, .text 
+      width: 100%
+      // float: left
+      // margin-right: 5%
+      // &:last-child
+      //   margin-right: 0
+
+
+
+
+
+
+
+
+
+
+// h1, h2, h3, h4, h5, h6
+//   text-align: center
+//   +above($break-medium)
+//     text-align: left
+
+h1
+  font-size: 1.45em
+  +above($break-medium)
+    font-size: 2.3em
+h2
+  font-size: 1.25em
+  +above($break-medium)
+    font-size: 2em
+h3
+  font-size: 1.1em
+  +above($break-medium)
+    font-size: 1.8em
+
+h4, h5, h6
+
+
+
+a
+  &:link
+    color: #941715
+  &:visited
+    color: #4a0c0f
+  &:hover, &:active, &:active
+    color: #3c8dde
+
+a.button
+  &:link
+    color: #fff
+  &:visited
+    color: #fff 
+  &:hover, &:active, &:active
+    color: #fff
+
+
+
