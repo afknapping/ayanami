@@ -19,10 +19,16 @@
       %h1.post
         = link_to article.title, article
       .post-summary
-        = article.summary
+        - if article.data.summary
+          %p
+            = article.data.summary
+        - else
+          = article.summary
+      %p
         = link_to "Read on...", article
 
-    %time{ :datetime => article.date }
+    %time{ :datetime => article.date, :pubtime => "" }
+      Posted
       = link_to article.date.strftime('%b %e'), article
 
 
