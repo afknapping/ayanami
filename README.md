@@ -1,0 +1,1 @@
+     ln -s ~/Dropbox/path/to/your/posts/ posts/
