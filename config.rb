@@ -14,8 +14,6 @@ activate :blog do |blog|
   # blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
   # blog.year_link = ":year.html"
-  # blog.month_link = ":year/:month.html"
-  # blog.day_link = ":year/:month/:day.html"
   blog.default_extension = ".md"
 
   blog.tag_template = "/blog-bricks/tag.html"
@@ -83,7 +81,7 @@ set :images_dir, 'assets/images'
 
 set :markdown_engine, :redcarpet
 set :markdown,  :fenced_code_blocks => true,
-                :autolink => true, 
+                :autolink => true,
                 :smartypants => true
 
 # Build-specific configuration
