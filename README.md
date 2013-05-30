@@ -16,6 +16,10 @@ Pro tip:
 ## How to use
 
 Coming soon… 
+- edit config
+- edit feed
+- edit CNAME
 
 ## Todos
 - Something is still wrong with the feed
+- reduce font-face rules to what is actually used
