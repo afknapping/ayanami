@@ -2,3 +2,4 @@
 build/
 source/content/posts
 source/content/posts/
+.DS_Store
