@@ -4,28 +4,42 @@
   - if prev_page
     %p= link_to 'Previous page', prev_page
 - page_articles.each_with_index do |article, i|
-  
+
   %article
-  
-    - if article.data.link
-      %h1.link
-        Link:
-        = link_to article.title, article.data.link
-      .link-body
-        = article.body
-      
-    
+    / image post
+    - if article.data.image
+      - if article.data.link
+        %a{ :href => article.data.link }
+          %img{ :src => article.data.image}
+        %p.imagesource
+          Source:
+          %a{ :href => current_page.data.link }
+            = article.data.link
+      - else
+        %img{ :src => article.data.image}
+      = article.body
     - else
-      %h1.post
-        = link_to article.title, article
-      .post-summary
-        - if article.data.summary
-          %p
-            = article.data.summary
-        - else
-          = article.summary
-      %p
-        = link_to "Read on...", article
+      / link post
+      - if article.data.link
+        %h1.link
+          Link:
+          = link_to article.title, article.data.link
+        .link-body
+          = article.body
+
+
+      - else
+        / text post
+        %h1.post
+          = link_to article.title, article
+        .post-summary
+          - if article.data.summary
+            %p
+              = article.data.summary
+          - else
+            = article.summary
+        %p
+          = link_to "Read on...", article
 
     %time{ :datetime => article.date, :pubtime => "" }
       Posted

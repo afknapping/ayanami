@@ -5,13 +5,29 @@
     = partial '/partials/nav'
     #navspacer
     .post
-      - if current_page.data.link
-        %h1.link
-          Link: 
-          = link_to current_page.data.title, current_page.data.link
+      / image post
+      - if current_page.data.image
+        - if current_page.data.link
+          %a{ :href => current_page.data.link }
+            %img{ :src => current_page.data.image}
+          %p.imagesource
+            Source:
+            %a{ :href => current_page.data.link }
+              = current_page.data.link
+        - else
+          %img{ :src => current_page.data.image}
       - else
-        %h1.post
-          = link_to current_page.data.title, current_page.url
+        / link post
+        - if current_page.data.link
+          %h1.link
+            Link:
+            = link_to current_page.data.title, current_page.data.link
+        - else
+          / text post
+          - if current_page.data.title
+            %h1.post
+              = link_to current_page.data.title, current_page.url
+
       %time{ :datetime => current_page.date, :pubtime => "" }
         Posted
         = link_to current_page.date.strftime('%b %e'), current_page.url
@@ -29,13 +45,13 @@
 
     .clear
     %footer
-      = partial '/partials/footer'  
+      = partial '/partials/footer'
 
 
     / %header
-    /   = partial '/partials/header'  
-    
+    /   = partial '/partials/header'
 
 
-  
+
+
   = partial 'partials/script-embed'
