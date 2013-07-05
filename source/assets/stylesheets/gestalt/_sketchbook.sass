@@ -42,8 +42,20 @@ li
   list-style-type: square
 
 pre
-  white-space: pre 
+  white-space: pre-line // normal // nowrap //  // pre 
+  max-width: 100%
+  overflow: scroll
+  padding: $line-height
+  border: 1px solid black
+  background-color: #cccccc
+  +border-radius()
+  +whitespace
+  // +whitespace
+  // padding-left: $line-height
+  // padding-bottom: $line-height
 
+.post h2
+  font-size: 1.4em
 
 a
   color: black
@@ -58,6 +70,6 @@ h1
 
 
 
-footer
+footer, .author
   border-top: 1px solid gray
   font-size: 0.6em

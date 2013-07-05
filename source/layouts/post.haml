@@ -17,6 +17,16 @@
         = link_to current_page.date.strftime('%b %e'), current_page.url
       = yield
 
+      .author
+        %p
+          This was written by
+          %a{ :href => 'http://filtercake.com'}
+            filtercake
+          \. Say hi on
+          %a{ :href => 'http://twitter.com/filtercake' }
+            twitter
+          \.
+
     .clear
     %footer
       = partial '/partials/footer'  
